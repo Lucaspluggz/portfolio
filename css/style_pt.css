@@ -1,0 +1,659 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=Roboto+Mono&display=swap');
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #0D0D0D;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 0.625rem 2.5rem;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #eda012;
+    
+}
+
+h2.titulo{
+    margin-top: 2.813rem;
+    color: #fff;
+    font-size: 2.375rem;
+    text-align: center;
+}
+
+h2 span{
+    color: #eda012;
+}
+/* ESTILO CABEÇALHO */
+
+header{
+    padding: 2.5rem 4%;
+    
+}
+
+header > .interface{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+a{
+    color: #a2a2a2;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+a:hover{
+    color: #eda012;
+    transform: scale(1.05);
+}
+
+
+header nav ul{
+    list-style-type: none;
+    
+}
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 1.25rem;
+}
+
+
+
+.btn-contato button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 6px #F2BF5E;
+    transition: .2s;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO MENU MOBILE */
+.menu{
+    display: none;
+}
+.menu .menu-faketrigger{
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+   
+}
+
+.menu .menu-lines{
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+.menu .menu-lines span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #eda012;
+    border-radius: 3px;
+    transition: all ease .2s;
+   
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span{
+
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+    opacity: 0;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
+}
+
+.menu ul{
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    background-color: #0D0D0D;
+    margin-left: -300px;
+    transition: all ease .2s;
+}
+
+.menu .menu-faketrigger:checked ~ ul{
+    margin-left: 0;
+}
+
+.menu ul li{
+    padding: 10px 30px;
+}
+
+
+
+
+/* .btn-abrir-menu i{
+    color: #eda012;
+    font-size: 2.5rem;
+    position: fixed;
+}
+.btn-abrir-menu{
+    display: none;
+   
+}
+.menu-mobile{
+    background-color: #0D0D0D;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+    
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+.menu-mobile .btn-fechar{
+    padding: 1.25rem 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #eda012;
+    font-size: 1.875rem;
+
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+
+}
+
+.menu-mobile nav ul li a{
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 1.25rem 8%;
+} */
+
+
+
+/* ESTILO DO TOPO */
+
+section.topo{
+    padding: 2.5rem 4%;
+    margin: 5rem 0px;
+}
+
+section.topo .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 5.625rem;
+}
+
+.topo h1{
+    color: #fff;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+}
+
+.topo h1 span{
+    color: #eda012;
+    font-size: 3.75rem;
+    font-size: 1.875rem;
+}
+
+.topo .txt-topo p{
+    color: #fff;
+    margin: 2.5rem 0;
+}
+
+.topo .img-topo img{
+    position: relative;
+    width: 25rem;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 30px;
+    }
+}
+
+#link-topo {
+    background-color: #eda012;
+    color: #fff;
+    padding: 0.625rem;
+    position: fixed;
+    right: 13px;
+    bottom: 18px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px #000;
+}
+/* ESTILO DA TRAMSIÇÃO */
+.section.transicao{
+    padding: 2.5rem 4%;
+}
+
+section.transicao .flex{
+    align-items: center;
+    justify-content: center;
+}
+
+.transicao .linha{
+    width: 80rem;
+    background-color: #eda012;
+    padding: 3px;
+    margin: 5rem 0 5rem;
+    border-radius: 5px;
+}
+
+
+
+/* ESTILO DAS ESPECIALIDADES */
+
+section.especialidades{
+    padding: 2.5rem 4%;
+    /* margin: 2rem 0 5rem; */
+    
+}
+
+section.especialidades .flex{
+    gap: 3.75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.especialidades .espe-box{
+    color: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    /* border: 2px solid #fff; */
+    margin-top: 45px;
+    transition: .2s;
+    text-align: center;
+}
+
+.especialidades .espe-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #ffffff6b;
+}
+
+.especialidades .espe-box i{
+    font-size: 4.375rem;
+    color: #eda012;
+}
+
+.especialidades .espe-box h3{
+    font-size: 28px;
+    margin: 0.938rem 0;
+}
+
+/* ESTILO DO SOBRE*/
+
+section.sobre{
+    padding: 5rem 4%;
+    
+    
+}
+
+section.sobre .flex{
+    align-items: center;
+   
+    gap: 3.75rem;
+}
+
+.sobre .img-sobre img{
+    transition: .2s;
+}
+
+.sobre .img-sobre img:hover{
+    transform: scale(1.05);
+    
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.875rem;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #eda012;
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 1.25rem 0;
+    text-align: justify;
+    
+}
+
+.btn-social button{
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background-color: #eda012;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+}
+
+/* ESTILO DOS PROJETOS */
+
+section.projetos{
+    padding: 5rem 4%;
+}
+
+section.projetos .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-projetos{
+    width: 360px;
+    height: 460px;
+    background-color: #eda012;
+    background-size: cover;
+    background-position: 50% 0%;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-projetos:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 3px 5px #a2a2a26e;
+    
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000091;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO DE CONTATO */
+
+section.contato{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+form input, form textarea{
+    width: 75%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 400px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #eda012;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+
+
+/* ESTILO DO FOOTER */
+
+footer{
+    padding: 60px 4%;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    margin-top: 2px;
+    padding: 40px 0;
+    
+}
+
+.borda{
+    border-top: 2px solid #eda012;
+}
+
+footer .line-footer p i{
+    color: #eda012;
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.line-footer .parceiros-footer img{
+    width: 50px;
+}
+
+.line-footer .parceiros-footer h6{
+    color: #fff;
+}
+
+.line-footer .btn-social button{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 1020px){
+    /*CLASSES GERAIS*/
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo{
+        font-size: 2.125rem;
+        line-height: 2.85rem;
+    }
+
+    /*CABEÇALHO*/
+    .hd-navbar, .btn-contato{
+        display: none;
+    }
+
+    header nav ul li{
+        display: flex;
+        padding: 0 1.25rem;
+    }
+    .menu{
+        display: block;
+    }
+    /* .btn-abrir-menu{
+        display: block;
+    } */
+
+    /*TOPO DO SITE*/
+    section.topo{
+        padding: 1.25 8%;
+        padding-top: 0;
+        margin: 0;
+        
+    }
+
+    section.topo .flex{
+        gap: 2.5rem;
+    }
+
+    .topo h1{
+        font-size: 1.563rem;
+        line-height: 1.875rem;
+    }
+
+    .topo .img-topo img{
+        width: 100%;
+    }
+
+    
+
+    /* ESTILO DA TRAMSIÇÃO */
+    .section.transicao{
+        padding: 1.25rem 4%;
+    }
+
+    section.transicao .flex{
+        flex-direction: column;
+    }
+    
+    .transicao .linha{
+        width: 20rem;
+        background-color: #eda012;
+        padding: 0.125rem;
+        margin: 5rem 0 5rem;
+        border-radius: 5px;
+    }
+    /* ESTILO DAS ESPECIALIDADES */
+
+    section.especialidades{
+        padding: 2.5rem 8%;
+        
+    }
+
+    /* ESTILO DO SOBRE*/
+
+    section.sobre{
+        padding: 5rem 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* ESTILO DOS PROJETOS */
+
+    section.projetos{
+    padding: 5rem 8%;
+    }
+
+    section.projetos .flex{
+        gap: 3.75rem;
+    }
+
+    .img-projetos{
+        width: 100%;
+        max-width: 17rem;
+        margin: 0 auto;
+        height: 28.75rem;
+    }
+
+    /* FOOTER */
+    footer .flex{
+        flex-direction: column;
+        gap: 1.875rem;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+}
+
+
+
+
+
